@@ -44,6 +44,7 @@ const AdminDashboard = () => {
   const [applications, setApplications] = useState([]);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  console.log(results);
 
   useEffect(() => {
     fetchData();
@@ -261,7 +262,7 @@ const AdminDashboard = () => {
                         className="p-3 bg-gray-50 rounded-lg border"
                       >
                         <p className="font-semibold text-gray-800">
-                          App ##{res.application?.applicationId}
+                          App #{res.application?.applicationId}
                         </p>
                         <p className="text-xs text-gray-600 font-mono truncate">
                           {res.resultData}
